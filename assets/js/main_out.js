@@ -609,6 +609,7 @@
 
             for (var char, name = "";;) { // nick name
                 char = view.getUint16(offset, true);
+		    
                 offset += 2;
                 if (0 == char) break;
                 name += String.fromCharCode(char);
@@ -714,7 +715,7 @@
     }
 
     function redrawGameScene() {
-        drawGameScene();
+        ///drawGameScene();
         wHandle.requestAnimationFrame(redrawGameScene)
     }
 
